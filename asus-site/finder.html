@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>三題選機 ・ ASUS 大筆電選機室</title>
+<meta name="description" content="回答三道選擇題，即時推薦最適合你的 ASUS 16–18 吋大型筆電。">
+<script>(function(){try{var m=localStorage.getItem("tufmode");if(m==="light"||m==="dark")document.documentElement.setAttribute("data-theme",m);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html"><b>ASUS <i>16–18″</i></b><span>獨家代理 ・ 盧經理</span></a>
+    <div class="mode" role="group" aria-label="顯示模式">
+      <button type="button" data-mode="light" aria-pressed="false">白日 AI</button>
+      <button type="button" data-mode="dark" aria-pressed="false">暗夜電競</button>
+    </div>
+  </div>
+  <nav class="nav" aria-label="主要頁面"><ul class="wrap"><li><a href="index.html"><small>01</small>首頁</a></li><li><a href="finder.html" aria-current="page"><small>02</small>三題選機</a></li><li><a href="models.html"><small>03</small>機種規格</a></li><li><a href="guide.html"><small>04</small>判斷依據</a></li><li><a href="contact.html"><small>05</small>聯絡代理</a></li></ul></nav>
+</header>
+<main id="main" class="wrap">
+
+<span class="eyebrow">Finder ・ 3 Questions</span>
+<h1 class="page-title">三題選機</h1>
+<p class="lede">預設答案已經算出一個結果。改任何一題，右側推薦會立刻重算，不必按送出。</p>
+
+<div class="finder section" style="margin-top:32px">
+  <form id="finder-form" onsubmit="return false">
+    <fieldset class="q"><legend><span>Q1 ・ 用途</span>這台機器，八成時間在做什麼？</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="purpose" id="purpose-ai" value="ai" checked>本地 AI 開發與推論<small>跑模型、微調、資料處理</small></label>
+        <label class="opt"><input type="radio" name="purpose" id="purpose-game" value="game">遊戲與電競為主<small>高更新率、穩定幀數</small></label>
+        <label class="opt"><input type="radio" name="purpose" id="purpose-both" value="both">白天開發、晚上打<small>兩邊都不想犧牲</small></label>
+      </div></fieldset>
+    <fieldset class="q"><legend><span>Q2 ・ 在意項目</span>如果只能堅持一項，你最在意？</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="care" id="care-vram" value="vram" checked>VRAM 與記憶體上限<small>決定能載入多大的模型</small></label>
+        <label class="opt"><input type="radio" name="care" id="care-screen" value="screen">螢幕素質與更新率<small>面板技術、亮度、Hz</small></label>
+        <label class="opt"><input type="radio" name="care" id="care-weight" value="weight">重量與可攜性<small>每天帶著走</small></label>
+        <label class="opt"><input type="radio" name="care" id="care-value" value="value">規格效益比<small>同級距的規格密度</small></label>
+      </div></fieldset>
+    <fieldset class="q"><legend><span>Q3 ・ 尺寸</span>桌面放得下多大？</legend>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="size" id="size-16" value="16">16 吋為上限<small>桌面或背包有限制</small></label>
+        <label class="opt"><input type="radio" name="size" id="size-18" value="18">要 18 吋大畫面<small>當桌機替代機用</small></label>
+        <label class="opt"><input type="radio" name="size" id="size-any" value="any" checked>都可以，看規格<small>尺寸不是重點</small></label>
+      </div></fieldset>
+    <p class="disclaimer">MATCH 分數代表這個建議有多明確，不是機率。分數接近 88 時，代表前兩名差距不大，兩台都值得看。</p>
+  </form>
+
+  <aside class="panel result" aria-live="polite" aria-label="推薦結果">
+    <div class="r-head"><span>最符合你的一台</span><b>MATCH<strong id="match">--</strong></b></div>
+    <div class="r-body" id="result-body"><p class="r-name">計算中…</p></div>
+  </aside>
+</div>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <span>ASUS 大筆電選機室 ・ 代理商選機參考頁，非華碩官方網站，不提供線上交易。</span>
+    <span><a href="tel:0917061212">0917-061-212</a> ・ leafy6674@gmail.com</span>
+  </div>
+  <div class="wrap" style="margin-top:8px">ASUS、TUF Gaming、ROG 為華碩電腦股份有限公司之商標。規格以原廠公告為準。</div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

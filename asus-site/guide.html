@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>判斷依據 ・ ASUS 大筆電選機室</title>
+<meta name="description" content="AI 開發與電競的選機判斷準則，以及 VRAM 與模型規模對照。">
+<script>(function(){try{var m=localStorage.getItem("tufmode");if(m==="light"||m==="dark")document.documentElement.setAttribute("data-theme",m);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html"><b>ASUS <i>16–18″</i></b><span>獨家代理 ・ 盧經理</span></a>
+    <div class="mode" role="group" aria-label="顯示模式">
+      <button type="button" data-mode="light" aria-pressed="false">白日 AI</button>
+      <button type="button" data-mode="dark" aria-pressed="false">暗夜電競</button>
+    </div>
+  </div>
+  <nav class="nav" aria-label="主要頁面"><ul class="wrap"><li><a href="index.html"><small>01</small>首頁</a></li><li><a href="finder.html"><small>02</small>三題選機</a></li><li><a href="models.html"><small>03</small>機種規格</a></li><li><a href="guide.html" aria-current="page"><small>04</small>判斷依據</a></li><li><a href="contact.html"><small>05</small>聯絡代理</a></li></ul></nav>
+</header>
+<main id="main" class="wrap">
+
+<span class="eyebrow">Criteria ・ Open logic</span>
+<h1 class="page-title">判斷依據</h1>
+<p class="lede">選機精靈背後的判斷準則，全部攤開。兩種用途各四條，依優先順序排列，你可以自己拿來覆核推薦結果。</p>
+
+<section class="section cols" style="margin-top:32px">
+  <article class="panel col">
+    <div class="col-head"><h2>白日 ・ AI 開發</h2><span class="mono">DAY</span></div>
+    <ol class="rules">
+      <li><div><h3>VRAM 容量</h3><p>決定能載入多大的模型。以 Q4 量化粗估：8GB 約 7B、12GB 約 13B、16GB 約 14B、24GB 約 32B。詳見下方對照表。</p></div></li>
+      <li><div><h3>系統記憶體上限</h3><p>資料前處理、多模型並存都吃系統記憶體。注意 Zephyrus G16 使用焊死的 LPDDR5X，買了就不能加，購買時就要決定容量。</p></div></li>
+      <li><div><h3>持續負載下的散熱</h3><p>微調一跑就是數小時。大機身的散熱餘裕，比跑分時的瞬間峰值更重要。</p></div></li>
+      <li><div><h3>色彩與文字銳利度</h3><p>長時間看程式碼，2.5K 以上解析度比較不累眼。OLED 對比好，但固定介面長時間顯示有烙印風險，建議開啟自動隱藏工作列。</p></div></li>
+    </ol>
+  </article>
+  <article class="panel col">
+    <div class="col-head"><h2>暗夜 ・ 電競</h2><span class="mono">NIGHT</span></div>
+    <ol class="rules">
+      <li><div><h3>更新率與反應時間</h3><p>競技遊戲看 240Hz 以上；OLED 的 0.2ms 反應時間讓快速畫面更乾淨。</p></div></li>
+      <li><div><h3>GPU TGP，不只是型號</h3><p>同一張 RTX 5090，在 175W 的 SCAR 18 和輕薄的 Zephyrus G16 上，持續滿載的幀數不會一樣。看型號，也要看功耗上限。</p></div></li>
+      <li><div><h3>面板技術取捨</h3><p>Mini LED 亮度高、適合 HDR；OLED 對比與反應最好；IPS 沒有烙印顧慮、高更新率較普及。</p></div></li>
+      <li><div><h3>鍵盤與散熱噪音</h3><p>滿載時風扇聲會直接影響耳機以外的體驗。大機身通常能用較低轉速壓住同樣的熱。</p></div></li>
+    </ol>
+  </article>
+</section>
+
+<section class="section" aria-labelledby="h-vram">
+  <div class="section-head"><div><span class="eyebrow">VRAM → Model size</span><h2 id="h-vram">VRAM 與可載入模型規模</h2></div>
+  <p>以下為 Q4 量化下的粗估參考值，不是保證值。實際可載入大小依推論框架、上下文長度與量化方式而異。</p></div>
+  <div class="table-wrap">
+    <table><thead><tr><th scope="col">VRAM</th><th scope="col">參考可載入規模（Q4 粗估）</th><th scope="col">對應機種</th></tr></thead><tbody id="vram-rows"></tbody></table>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-fig">
+  <div class="section-head"><div><span class="eyebrow">Figures</span><h2 id="h-fig">尺寸與顯存，畫出來看</h2></div></div>
+  <div class="figs">
+    <figure class="panel"><div class="plate"><svg viewBox="0 0 400 270" role="img" aria-label="16 吋與 18 吋 16:10 面板等比例尺寸比較：16 吋約 34.5×21.5 公分，18 吋約 38.8×24.2 公分">
+  <rect x="20" y="30" width="348.9" height="218.1" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+  <rect x="20" y="54.2" width="310.2" height="193.9" rx="4" style="fill:var(--surface);stroke:var(--ink-2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="360.9" y="48" text-anchor="end" style="fill:var(--accent);font:700 13px var(--f-display)">18″ ・ 38.8 × 24.2 cm</text>
+  <text x="30" y="236.1" style="fill:var(--ink-2);font:700 12px var(--f-display)">16″ ・ 34.5 × 21.5 cm</text>
+  <text x="20" y="18" style="fill:var(--muted);font:500 11px var(--f-mono)">16:10 可視面積等比例 ・ 18″ 約多 27%</text>
+</svg></div>
+      <figcaption><b>16 吋 vs 18 吋</b>　兩種 16:10 面板依實際對角線等比例繪製。18 吋可視面積約多出 27%，桌面深度也要跟著多留空間。</figcaption></figure>
+    <figure class="panel"><div class="plate"><svg viewBox="0 0 400 250" role="img" aria-label="五款機種 VRAM 對照：TUF A16 8GB、TUF A18 12GB、Strix G18 16GB、SCAR 18 與 Zephyrus G16 各 24GB，以 24GB 為滿格">
+  <text x="112" y="14" style="fill:var(--muted);font:500 11px var(--f-mono)">VRAM（GB）・ 24GB 為滿格</text>
+  <line x1="195.3" y1="26" x2="195.3" y2="222" style="stroke:var(--line-2)" stroke-dasharray="2 4"/><text x="195.3" y="238" text-anchor="middle" style="fill:var(--muted);font:500 10px var(--f-mono)">8</text><line x1="237.0" y1="26" x2="237.0" y2="222" style="stroke:var(--line-2)" stroke-dasharray="2 4"/><text x="237.0" y="238" text-anchor="middle" style="fill:var(--muted);font:500 10px var(--f-mono)">12</text><line x1="278.7" y1="26" x2="278.7" y2="222" style="stroke:var(--line-2)" stroke-dasharray="2 4"/><text x="278.7" y="238" text-anchor="middle" style="fill:var(--muted);font:500 10px var(--f-mono)">16</text><line x1="362.0" y1="26" x2="362.0" y2="222" style="stroke:var(--line-2)" stroke-dasharray="2 4"/><text x="362.0" y="238" text-anchor="middle" style="fill:var(--muted);font:500 10px var(--f-mono)">24</text><text x="102" y="41" text-anchor="end" style="fill:var(--ink-2);font:600 12px var(--f-display)">TUF A16</text><rect x="112" y="30" width="250" height="14" rx="3" style="fill:var(--surface)"/><rect x="112" y="30" width="83.3" height="14" rx="3" style="fill:var(--accent)"/><text x="189.3" y="41" text-anchor="end" style="fill:var(--on-accent);font:700 10px var(--f-mono)">8GB</text><text x="102" y="81" text-anchor="end" style="fill:var(--ink-2);font:600 12px var(--f-display)">TUF A18</text><rect x="112" y="70" width="250" height="14" rx="3" style="fill:var(--surface)"/><rect x="112" y="70" width="125.0" height="14" rx="3" style="fill:var(--accent)"/><text x="231.0" y="81" text-anchor="end" style="fill:var(--on-accent);font:700 10px var(--f-mono)">12GB</text><text x="102" y="121" text-anchor="end" style="fill:var(--ink-2);font:600 12px var(--f-display)">Strix G18</text><rect x="112" y="110" width="250" height="14" rx="3" style="fill:var(--surface)"/><rect x="112" y="110" width="166.7" height="14" rx="3" style="fill:var(--accent)"/><text x="272.7" y="121" text-anchor="end" style="fill:var(--on-accent);font:700 10px var(--f-mono)">16GB</text><text x="102" y="161" text-anchor="end" style="fill:var(--ink-2);font:600 12px var(--f-display)">SCAR 18</text><rect x="112" y="150" width="250" height="14" rx="3" style="fill:var(--surface)"/><rect x="112" y="150" width="250.0" height="14" rx="3" style="fill:var(--accent)"/><text x="356.0" y="161" text-anchor="end" style="fill:var(--on-accent);font:700 10px var(--f-mono)">24GB</text><text x="102" y="201" text-anchor="end" style="fill:var(--ink-2);font:600 12px var(--f-display)">Zephyrus G16</text><rect x="112" y="190" width="250" height="14" rx="3" style="fill:var(--surface)"/><rect x="112" y="190" width="250.0" height="14" rx="3" style="fill:var(--accent)"/><text x="356.0" y="201" text-anchor="end" style="fill:var(--on-accent);font:700 10px var(--f-mono)">24GB</text>
+</svg></div>
+      <figcaption><b>五款機種 VRAM</b>　以 24GB 為滿格。SCAR 18 與 Zephyrus G16 同為 24GB，差別在重量與 TGP。</figcaption></figure>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <span>ASUS 大筆電選機室 ・ 代理商選機參考頁，非華碩官方網站，不提供線上交易。</span>
+    <span><a href="tel:0917061212">0917-061-212</a> ・ leafy6674@gmail.com</span>
+  </div>
+  <div class="wrap" style="margin-top:8px">ASUS、TUF Gaming、ROG 為華碩電腦股份有限公司之商標。規格以原廠公告為準。</div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
